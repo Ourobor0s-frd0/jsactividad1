@@ -15,54 +15,46 @@
         <div class="card">
             <div class="img-card"></div>
               <h6>Laptop Gamer AMD</h6>
-              <p>Precio base: $<span class="precio-inicial"></span> </p>
+              <p>Precio base: $ <span class="precio-inicial"></span> </p>
         
               <p>Cantidad:
                 <span class="cantidad">0</span>
 
-
-
                 <button onclick="
                 var cantidad = document.querySelector('.cantidad');
+    var numeroActual = Number(cantidad.innerHTML);
+    var resultado = numeroActual + 1;
 
-                var numeroActual = cantidad.innerHTML
+    cantidad.innerHTML = resultado;
 
-                var resultado = Number (numeroActual) + 1
-
-                cantidad.innerHTML = resultado "
+    var valorFinal = document.querySelector('.valor-final');
+    valorFinal.innerHTML = precio * resultado;
+                "
                 >+</button>
 
-
-
-
                 <button
-
                 onclick="
-                var cantidad = document.querySelector('.cantidad');
+                 var cantidad = document.querySelector('.cantidad');
+    var numeroActual = Number(cantidad.innerHTML);
+    var resultado = numeroActual - 1;
 
-                var numeroActual = cantidad.innerHTML
+    cantidad.innerHTML = resultado;
 
-                var resultado = Number (numeroActual) - 1
-
-                cantidad.innerHTML = resultado "
-
+    var valorFinal = document.querySelector('.valor-final');
+    valorFinal.innerHTML = precio * resultado; "
                 >-</button>
-
-
 
               </p>
             </div>
-
         </div>
     </section>
 
+
+
     <div class="total-section">
-        <p>Total a pagar: $<span class="valor-total"></span> </p>
+    <p>Total a pagar: $<span class="valor-final"></span> </p>
     </div>
 
-    <script src="./assets/js/script.js">
-      
-
-    </script>
+    <script src="./assets/js/script.js"> </script>
 </body>
 </html>
